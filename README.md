@@ -16,7 +16,7 @@ npm install abab
 
 ```js
 const btoa = require('abab').btoa;
-atob('Hello, world!'); // 'SGVsbG8sIHdvcmxkIQ=='
+btoa('Hello, world!'); // 'SGVsbG8sIHdvcmxkIQ=='
 ```
 
 ### `atob`
