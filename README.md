@@ -26,6 +26,10 @@ const atob = require('abab').atob;
 atob('SGVsbG8sIHdvcmxkIQ=='); // 'Hello, world!'
 ```
 
+#### Valid characters
+
+[Per the spec](https://html.spec.whatwg.org/multipage/webappapis.html#atob:dom-windowbase64-btoa-3), `btoa` will accept strings "containing only characters in the range `U+0000` to `U+00FF`." If passed a string with characters above `U+00FF`, `btoa` will return `null`. If `atob` is passed a string that is not base64-valid, it will also return `null`. In both cases when `null` is returned, the spec calls for throwing a `DOMException` of type `InvalidCharacterError`.
+
 ## Contributing
 
 - See the [PR checklist](CONTRIBUTING.md#checklists)
