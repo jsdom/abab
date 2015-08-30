@@ -32,7 +32,7 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // 'Hello, world!'
 
 # TODO
 
-- [ ] Adapt raw file in ./test to real mocha tests
+- [ ] Add real tests
 - [ ] Investigate browser testing story
 - [ ] After above, update compatibility section with specific browsers
 - [ ] Test all major versions of io.js on Travis CI
