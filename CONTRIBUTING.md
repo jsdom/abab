@@ -1,3 +1,9 @@
+# Contributing
+
+If you have any questions or run into any trouble contributing to this repo, please file an issue or contact me. I'd be happy to help.
+
+# Checklists
+
 ## Pull Request
 
 - Run lint - `npm lint`

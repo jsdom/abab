@@ -28,7 +28,7 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // 'Hello, world!'
 
 ## Contributing
 
-- See the [PR checklist](CHECKLISTS.md)
+- See the [PR checklist](CONTRIBUTING.md#checklists)
 
 # TODO
 
