@@ -37,12 +37,16 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // 'Hello, world!'
 # TODO
 
 - [ ] Add real tests
+- [x] Add .travis.yml
+- [x] Test all major versions of io.js on Travis CI
+- [x] Add deploy checklist
+- [x] Fill in rest of README
+
+After 1.0:
+
+- [ ] Investigate linting situation (clone jsdom's?) 
 - [ ] Investigate browser testing story
 - [ ] After above, update compatibility section with specific browsers
-- [ ] Test all major versions of io.js on Travis CI
-- [x] Add deploy checklist
-- [ ] Investigate linting situation (clone jsdom's?) 
-- [x] Fill in rest of README
 - [ ] Figure out LICENSE situation - the copyright is owned by Google, I believe
 
 # Ideas
