@@ -6,7 +6,7 @@ Compatibility: io.js (all major versions), browsers (using browserify or webpack
 
 Install with `npm`:
 
-```
+```sh
 npm install abab
 ```
 
@@ -14,14 +14,14 @@ npm install abab
 
 ### `btoa`
 
-```
+```js
 const btoa = require('abab').btoa;
 atob('Hello, world!'); // 'SGVsbG8sIHdvcmxkIQ=='
 ```
 
 ### `atob`
 
-```
+```js
 const atob = require('abab').atob;
 atob('SGVsbG8sIHdvcmxkIQ=='); // 'Hello, world!'
 ```
