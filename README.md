@@ -12,16 +12,16 @@ npm install abab
 
 ## API
 
-### `btoa`
+### `btoa` ASCII to base64
 
 ```js
 const btoa = require('abab').btoa;
 btoa('Hello, world!'); // 'SGVsbG8sIHdvcmxkIQ=='
 ```
 
-### `atob`
+### `atob` base64 to ASCII
 
-```js
+```js 
 const atob = require('abab').atob;
 atob('SGVsbG8sIHdvcmxkIQ=='); // 'Hello, world!'
 ```
