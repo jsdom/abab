@@ -18,3 +18,7 @@ Compatibility: io.js (all major versions), browsers (using browserify or webpack
 - [ ] Investigate linting situation (clone jsdom's?) 
 - [ ] Fill in rest of README
 - [ ] Figure out LICENSE situation - the copyright is owned by Google, I believe
+
+# Ideas
+
+- If we can set up browser testing (Sauce?), would be cool to test against every browser's implementation of atob/btoa
