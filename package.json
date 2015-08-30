@@ -1,0 +1,27 @@
+{
+  "name": "abab",
+  "version": "1.0.0",
+  "description": "WHATWG spec-compliant implementations of window.atob and window.btoa.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsdom/abab.git"
+  },
+  "keywords": [
+    "atob",
+    "btoa",
+    "browser"
+  ],
+  "author": "Jeff Carpenter <gcarpenterv@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsdom/abab/issues"
+  },
+  "homepage": "https://github.com/jsdom/abab#readme",
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
+}
