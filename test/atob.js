@@ -35,6 +35,7 @@ const cases = ["", "abcd", " abcd", "abcd ", " abcd===", "abcd=== ",
     {toString: function() { return "abcd" }},
 ];
 
+// TODO: make this less terrible
 const answers = [[],[105,183,29],[105,183,29],[105,183,29],null,null,null,null,[105],[105,183],null,null,null,null,null,null,null,null,null,null,null,null,null,[105],null,null,null,[105,183],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[105,183,29],[105,183,29],[105,183,29],[105,183,29],[105,183,29],null,[105,183,29],[105,183,29],[105],null,[252],[255,240],[255,255,192],null,null,[3],[0,15],null,[0,0,63],null,null,null,[158,233,101],null,[215],null,[182,187,158],null,[53,163],[34,119,226,158,43,114],null,null,null,[126,138],[105,183,29]];
 
 describe('atob', function () {
@@ -60,6 +61,3 @@ describe('atob', function () {
   });
 
 });
-
-// Used to generate answers (in Chrome):
-// JSON.stringify(tests.map(function (t) { var x = null; try { x = atob(t); } catch (e) {} if (x !== null) { x = x.split('').map(function (c) { return c.charCodeAt(0); })} return x; }));
