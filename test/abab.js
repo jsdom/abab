@@ -5,7 +5,6 @@ const btoa = require('..').btoa;
 const atob = require('..').atob;
 
 const plaintext = "Hello, world!";
-const base64text = "SGVsbG8sIHdvcmxkIQ==";
 
 describe('abab', function () {
 
