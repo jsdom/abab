@@ -1,6 +1,6 @@
 # Contributing
 
-If you have any questions or run into any trouble contributing to this repo, please file an issue or contact me. I'd be happy to help.
+If you have any questions or run into any trouble contributing to this repo, please file an issue or contact [the maintainer](https://github.com/jeffcarp). I'd be happy to help.
 
 # Checklists
 
