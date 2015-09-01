@@ -6,11 +6,12 @@ If you have any questions or run into any trouble contributing to this repo, ple
 
 ## Pull Request
 
-- Run lint - `npm lint`
+- Run lint - `npm run lint` (this does not exist yet, see TODOs in README)
 - Run tests - `npm test`
 
 ## Deploy
 
+- `git status` - verify clean working directory
 - `nvm use`
 - `npm install`
 - `npm test`
