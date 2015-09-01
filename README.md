@@ -34,21 +34,6 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // 'Hello, world!'
 
 - See the [PR checklist](CONTRIBUTING.md#checklists)
 
-# TODO
-
-- [ ] Add real tests
-- [x] Add .travis.yml
-- [x] Test all major versions of io.js on Travis CI
-- [x] Add deploy checklist
-- [x] Fill in rest of README
-
-After 1.0:
-
-- [ ] Investigate linting situation (clone jsdom's?) 
-- [ ] Investigate browser testing story
-- [ ] After above, update compatibility section with specific browsers
-- [ ] Figure out LICENSE situation - the copyright is owned by Google, I believe
-
 # Ideas
 
 - If we can set up browser testing (Sauce?), would be cool to test against every browser's implementation of atob/btoa
