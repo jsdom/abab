@@ -2,6 +2,7 @@
 
 const assert = require('assert');
 const btoa = require('..').btoa;
+const stripChars = require('./util').stripChars;
 
 const cases = ["עברית", "", "ab", "abc", "abcd", "abcde",
   // This one is thrown in because IE9 seems to fail atob(btoa()) on it.  Or
@@ -28,12 +29,8 @@ describe('btoa', function () {
       expected = String.fromCharCode.apply(null, expected);
     }
 
-    const inputDescriptor = typeof input === 'string'
-      ? input.replace(/[^\x60-\x7F]/g, '?') 
-      : input;
-    const expectedDescriptor = typeof expected === 'string' 
-      ? expected.replace(/[^\x60-\x7F]/g, '?') 
-      : expected;
+    const inputDescriptor = stripChars(input);
+    const expectedDescriptor = stripChars(expected);
 
     it(`correctly converts ${inputDescriptor} into ${expectedDescriptor}`, function () {
       assert.strictEqual(btoa(input), expected);

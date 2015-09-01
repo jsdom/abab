@@ -2,6 +2,7 @@
 
 const assert = require('assert');
 const atob = require('..').atob;
+const stripChars = require('./util').stripChars;
 
 const cases = ["", "abcd", " abcd", "abcd ", " abcd===", "abcd=== ",
     "abcd ===", "a", "ab", "abc", "abcde", String.fromCharCode(0xd800, 0xdc00),
@@ -48,12 +49,8 @@ describe('atob', function () {
       expected = String.fromCharCode.apply(null, expected);
     }
 
-    const inputDescriptor = typeof input === 'string'
-      ? input.replace(/[^\x60-\x7F]/g, '?') 
-      : input;
-    const expectedDescriptor = typeof expected === 'string' 
-      ? expected.replace(/[^\x60-\x7F]/g, '?') 
-      : expected;
+    const inputDescriptor = stripChars(input);
+    const expectedDescriptor = stripChars(expected);
 
     it(`correctly converts ${inputDescriptor} into ${expectedDescriptor}`, function () {
       assert.strictEqual(atob(input), expected);
