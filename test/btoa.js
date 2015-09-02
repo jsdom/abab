@@ -13,7 +13,7 @@ const cases = ["עברית", "", "ab", "abc", "abcd", "abcde",
   "\0a", "a\0b",
   // WebIDL tests.
   undefined, null, 7, 12, 1.5, true, false, NaN, +Infinity, -Infinity, 0, -0,
-  {toString: function() { return "foo" }},
+  {toString: function() { return "foo" }}
 ];
 
 // TODO: make this less terrible

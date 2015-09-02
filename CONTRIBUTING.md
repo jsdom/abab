@@ -4,10 +4,10 @@ If you have any questions or run into any trouble contributing to this repo, ple
 
 # Checklists
 
-## Pull Request
+## Before submitting a Pull Request
 
-- Run lint - `npm run lint` (this does not exist yet, see TODOs in README)
-- Run tests - `npm test`
+- `npm run lint`
+- `npm test`
 
 ## Deploy
 

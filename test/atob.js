@@ -33,7 +33,7 @@ const cases = ["", "abcd", " abcd", "abcd ", " abcd===", "abcd=== ",
     // WebIDL tests
     undefined, null, 7, 12, 1.5, true, false, NaN, +Infinity, -Infinity, 0, -0,
     {toString: function() { return "foo" }},
-    {toString: function() { return "abcd" }},
+    {toString: function() { return "abcd" }}
 ];
 
 // TODO: make this less terrible

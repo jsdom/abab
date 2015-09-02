@@ -1,0 +1,14 @@
+env:
+  node: true
+  mocha: true
+extends: eslint:recommended
+ecmaFeatures:
+  blockBindings: true
+  templateStrings: true
+  octalLiterals: true
+  binaryLiterals: true
+  generators: true
+  forOf: true
+  objectLiteralShorthandProperties: true
+  objectLiteralShorthandMethods: true
+  classes: true
