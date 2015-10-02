@@ -1,3 +1,5 @@
 test
 *.md
+.npmignore
+.nvmrc
 .travis.yml
