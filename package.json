@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "WHATWG spec-compliant implementations of window.atob and window.btoa.",
   "main": "index.js",
+  "files": ["index.js", "lib/"],
   "scripts": {
     "test": "mocha",
     "lint": "jscs . && eslint ."
