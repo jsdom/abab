@@ -1,5 +1,7 @@
 # abab
 
+[![npm version](https://badge.fury.io/js/abab.svg)](https://www.npmjs.com/package/abab)
+
 A module that implements `window.atob` and `window.btoa` according to the [WHATWG spec](https://html.spec.whatwg.org/multipage/webappapis.html#atob). The code is originally from [w3c/web-platform-tests](https://github.com/w3c/web-platform-tests/blob/master/html/webappapis/atob/base64.html).
 
 Compatibility: io.js (all major versions), browsers (using browserify or webpack)
