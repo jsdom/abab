@@ -1,8 +1,8 @@
 'use strict';
 
 const assert = require('assert');
-const btoa = require('..').btoa;
-const atob = require('..').atob;
+const btoa = require('../..').btoa;
+const atob = require('../..').atob;
 
 const plaintext = 'Hello, world!';
 

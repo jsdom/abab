@@ -1,10 +1,4 @@
-'use strict';
-
-const assert = require('assert');
-const atob = require('..').atob;
-const stripChars = require('./util').stripChars;
-
-const cases = ['', 'abcd', ' abcd', 'abcd ', ' abcd===', 'abcd=== ',
+module.exports.cases = ['', 'abcd', ' abcd', 'abcd ', ' abcd===', 'abcd=== ',
     'abcd ===', 'a', 'ab', 'abc', 'abcde', String.fromCharCode(0xd800, 0xdc00),
     '=', '==', '===', '====', '=====',
     'a=', 'a==', 'a===', 'a====', 'a=====',
@@ -37,7 +31,7 @@ const cases = ['', 'abcd', ' abcd', 'abcd ', ' abcd===', 'abcd=== ',
 ];
 
 // TODO: make this less terrible
-const answers = [
+module.exports.answers = [
   [],[105,183,29],[105,183,29],[105,183,29],null,null,null,null,[105],
   [105,183],null,null,null,null,null,null,null,null,null,null,null,null,
   null,[105],null,null,null,[105,183],null,null,null,null,null,null,null,
@@ -48,23 +42,3 @@ const answers = [
   [182,187,158],null,[53,163],[34,119,226,158,43,114],null,null,null,[126,138],
   [105,183,29]
 ];
-
-describe('atob', function () {
-
-  cases.forEach(function (input, index) {
-    let expected = answers[index];
-
-    // TODO: update answers so this is unnecessary
-    if (expected instanceof Array) {
-      expected = String.fromCharCode.apply(null, expected);
-    }
-
-    const inputDescriptor = stripChars(input);
-    const expectedDescriptor = stripChars(expected);
-
-    it(`correctly converts ${inputDescriptor} into ${expectedDescriptor}`, function () {
-      assert.strictEqual(atob(input), expected);
-    });
-  });
-
-});
