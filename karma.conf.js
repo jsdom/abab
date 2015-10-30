@@ -5,11 +5,15 @@ function prefixTag(tagValue, tagPrefix) {
 const sauceBrowsers = {
   'Chrome': {
     base: 'SauceLabs',
-    browserName: 'chrome'
+    browserName: 'Chrome'
   },
   'Firefox': {
     base: 'SauceLabs',
-    browserName: 'firefox'
+    browserName: 'Firefox'
+  },
+  'Internet Explorer': {
+    base: 'SauceLabs',
+    browserName: 'Internet Explorer'
   }
 };
 const browsers = process.env.SAUCE_USERNAME ? Object.keys(sauceBrowsers) : ['Firefox'];
