@@ -9,7 +9,7 @@ const cases = require('../fixtures/atob').cases;
 function browserBtoa(input) {
   try {
     return window.btoa(input);
-  } catch(e) {
+  } catch (e) {
     return null;
   }
 }

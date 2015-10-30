@@ -1,5 +1,5 @@
 function prefixTag(tagValue, tagPrefix) {
-  return tagValue ? (tagPrefix ? tagPrefix + ":" + tagValue : tagValue) : undefined;
+  return tagValue ? (tagPrefix ? tagPrefix + ':' + tagValue : tagValue) : undefined;
 }
 
 const sauceBrowsers = {
@@ -17,13 +17,14 @@ const sauceBrowsers = {
   }
 };
 const browsers = process.env.SAUCE_USERNAME ? Object.keys(sauceBrowsers) : ['Firefox'];
-if(!!process.env.SAUCE_USERNAME !== !!process.env.SAUCE_ACCESS_KEY) {
-    throw new Error('Both SAUCE_USERNAME and SAUCE_ACCESS_KEY should be configured');
+
+if (!!process.env.SAUCE_USERNAME !== !!process.env.SAUCE_ACCESS_KEY) {
+  throw new Error('Both SAUCE_USERNAME and SAUCE_ACCESS_KEY should be configured');
 }
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
-    basePath: "",
+    basePath: '',
     files: ['./test/browser/*.js'],
 
     preprocessors: {
@@ -40,24 +41,24 @@ module.exports = function(config) {
       }
     },
 
-    frameworks: ["mocha"],
+    frameworks: ['mocha'],
 
-    reporters: ["dots", "saucelabs"],
+    reporters: ['dots', 'saucelabs'],
 
     sauceLabs: {
       title: process.env.BUILD_NAME,
       tags:
         [
-          prefixTag(process.env.TRAVIS_BRANCH, "branch"),
-          prefixTag(process.env.TRAVIS_PULL_REQUEST, "pr"),
-          prefixTag(process.env.TRAVIS_COMMIT, "commit"),
-          prefixTag(process.env.TRAVIS_TAG, "tag")
+          prefixTag(process.env.TRAVIS_BRANCH, 'branch'),
+          prefixTag(process.env.TRAVIS_PULL_REQUEST, 'pr'),
+          prefixTag(process.env.TRAVIS_COMMIT, 'commit'),
+          prefixTag(process.env.TRAVIS_TAG, 'tag')
         ]
-        .filter(function(t) {
+        .filter(function (t) {
           // Remove useless tags
-          return !!t && t !== "false";
+          return !!t && t !== 'false';
         }),
-      "public": "public"
+      'public': 'public'
 
     },
 

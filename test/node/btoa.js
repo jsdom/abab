@@ -7,7 +7,6 @@ const data = require('../fixtures/btoa');
 const cases = data.cases;
 const answers = data.answers;
 
-
 describe('btoa', function () {
 
   cases.forEach(function (input, index) {

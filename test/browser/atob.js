@@ -5,11 +5,12 @@ const assert = require('assert');
 const atob = require('../..').atob;
 const stripChars = require('../util').stripChars;
 const cases = require('../fixtures/atob').cases;
+const ieExemptCases = require('../fixtures/ie-exempt').cases;
 
 function browserAtob(input) {
   try {
     return window.atob(input);
-  } catch(e) {
+  } catch (e) {
     return null;
   }
 }

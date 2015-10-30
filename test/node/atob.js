@@ -7,7 +7,6 @@ const data = require('../fixtures/atob');
 const cases = data.cases;
 const answers = data.answers;
 
-
 describe('atob', function () {
 
   cases.forEach(function (input, index) {
