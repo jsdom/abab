@@ -4,7 +4,7 @@
 const assert = require('assert');
 const btoa = require('../..').btoa;
 const stripChars = require('../util').stripChars;
-const cases = require('../fixtures/atob').cases;
+const cases = require('../fixtures/btoa').cases;
 
 function browserBtoa(input) {
   try {
