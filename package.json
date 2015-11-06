@@ -10,7 +10,7 @@
   "scripts": {
     "mocha": "mocha test/node",
     "karma": "karma start",
-    "test": "npm run mocha && npm run karma",
+    "test": "npm run lint && npm run mocha && npm run karma",
     "lint": "jscs . && eslint ."
   },
   "repository": {
