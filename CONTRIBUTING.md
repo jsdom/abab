@@ -1,6 +1,6 @@
 # Contributing
 
-If you have any questions or run into any trouble contributing to this repo, please file an issue or contact [the maintainer](https://github.com/jeffcarp). I'd be happy to help.
+If you have any questions or run into any trouble contributing to this repo, please file an issue or contact [the maintainer](https://github.com/jeffcarp).
 
 # Checklists
 
@@ -11,7 +11,11 @@ If you have any questions or run into any trouble contributing to this repo, ple
 
 ## Deploy
 
-- `git status` - verify clean working directory
+- `git checkout master`
+- `git pull`
+- `git status`
+  - Verify clean working directory
+  - Verify branch is up-to-date with 'origin/master'
 - `nvm use`
 - `npm install`
 - `npm test`
