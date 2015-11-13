@@ -19,6 +19,7 @@ If you have any questions or run into any trouble contributing to this repo, ple
 - `nvm use`
 - `npm install`
 - `npm test`
+- Verify Travis build is also passing https://travis-ci.org/jsdom/abab
 - Bump version in `package.json`
 - `git add package.json`
 - `git commit -m "Version 0.0.0"`
