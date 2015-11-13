@@ -34,17 +34,19 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // 'Hello, world!'
 
 ## Browsers
 
-If you want to include just one of the methods to save bytes in your client-side code, you could `require` the desired module directly.
+If you want to include just one of the methods to save bytes in your client-side code, you can `require` the desired module directly.
 
 ```js
 var atob = require('abab/lib/atob');
 var btoa = require('abab/lib/btoa');
 ```
 
-## Contributing
+-----
 
-- See the [PR checklist](CONTRIBUTING.md#checklists)
+### Checklists
 
-# Ideas
+If you're **submitting a PR** or **deploying to npm**, please use the [checklists in CONTRIBUTING.md](https://github.com/jsdom/abab/blob/master/CONTRIBUTING.md#checklists)
 
-- If we can set up browser testing (Sauce?), would be cool to test against every browser's implementation of atob/btoa
+### Remembering `atob` vs. `btoa`
+
+Here's a mnemonic that might be useful: if you have a plain string and want to base64 encode it, then decode it, `btoa` is what you run before (**b**efore - **b**toa), and `atob` is what you run after (**a**fter - **a**tob).
