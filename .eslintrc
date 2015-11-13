@@ -4,6 +4,7 @@ env:
   browser: true
 extends: eslint:recommended
 ecmaFeatures:
+  arrowFunctions: true
   blockBindings: true
   templateStrings: true
   octalLiterals: true
@@ -13,3 +14,5 @@ ecmaFeatures:
   objectLiteralShorthandProperties: true
   objectLiteralShorthandMethods: true
   classes: true
+rules:
+  strict: [2, "global"]

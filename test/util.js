@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   stripChars: function (str) {
     if (typeof str === 'string') {

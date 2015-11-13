@@ -1,3 +1,5 @@
+'use strict';
+
 function prefixTag(tagValue, tagPrefix) {
   return tagValue ? (tagPrefix ? tagPrefix + ':' + tagValue : tagValue) : undefined;
 }
@@ -25,10 +27,10 @@ if (!!process.env.SAUCE_USERNAME !== !!process.env.SAUCE_ACCESS_KEY) {
 module.exports = function (config) {
   config.set({
     basePath: '',
-    files: ['./test/browser/*.js'],
+    files: ['./test/browser.js'],
 
     preprocessors: {
-      'test/browser/*.js': ['webpack']
+      'test/browser.js': ['webpack']
     },
 
     webpack: {
@@ -36,7 +38,7 @@ module.exports = function (config) {
         loaders: [{
           test: /\.js?$/,
           exclude: /node_modules/,
-          loader: 'babel?optional[]=runtime&stage=0'
+          loader: 'babel?presets[]=es2015'
         }]
       }
     },
