@@ -11,6 +11,7 @@ If you have any questions or run into any trouble contributing to this repo, ple
 
 ## Deploy
 
+- Update `CHANGELOG.md` to reflect changes since last tag
 - `git checkout master`
 - `git pull`
 - `git status`
