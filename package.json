@@ -1,6 +1,6 @@
 {
   "name": "abab",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "WHATWG spec-compliant implementations of window.atob and window.btoa.",
   "main": "index.js",
   "files": [
