@@ -1,10 +1,25 @@
+# From: https://github.com/Joris-van-der-Wel/karma-mocha-webworker/blob/master/.travis.yml
 language: node_js
 node_js:
-- '4'
-before_script:
-- export DISPLAY=:99.0
-- sh -e /etc/init.d/xvfb start
-env:
-  global:
-    - secure: "OqQvejPwOTjQhx0xztksUMuOu+1jLpDChOraPqRUVGCDeGJzQIydCYZxvIRql1hSz0msYJQtnHbjpW/Jw2fKS+QTG4L1AEafn08Wu3QPVroj4Eanju/powAE0cI3szHEisqdNtPKnoBa3JNhF6RkMU0FUVSF7iZJMadQRf0K31JLAv3QMMC7+XQqiMjPrVXSpmx+4Wo5ctjUUKVUWTjCdRAK+ggfqULpc1drHcnmTpXZZ12vY1VJOS7iTwSanL0Wu1yP/ingV6niv6vLMEbHzZw8pOVAqF8WbEOdOnNeWIazDe/gvzFhr7/STe3uwWaWhpIEOS5K8qKILWNSwQxDMjhPmvv52bemODgz14tBE+J79jTeAFXTU3ndq0XuVfha9K31cbxt17j/GXei+xtTCwsZskCNU2AlwtnJg5OvajqBQTBPRea3DBbjf4XP70Lduw5VWcxbeY9LjiHHcVz2S+NNv1J+K1uB8otYGvFHIEqf0bY6Lecjo8yz79jHXdn+jV+T8GLlBjIAoPo9LusiA7VXtXgztXYEdQf81T24EMu6FiVd2Hm/0hl2oc+4m2RErT9GIfbo5uUIRv5271nc9MN9Vzjbe+Nz6VXHhEotOzQTB+5Y/P5S4+EXUrPmoh2zdhDRx+xnkxjcgMXId2MoSfrTf+uBbiDKl6VXWawIrro="
-    - secure: "o6lZFNdakWHdZJhrduiFN0nFls3o2d1cTjBV6QmBUgP6f2VCrvq8LABfDj37TOuaQSEwbEi5cjzm5zqw+nvgUfWcGSykRibEdyKMlGpvUSXVyd69bIZvY2D78vliWgZ+FRv1ixW9Ghjed9Ra78CbLOEDKAoLELjXm1V9qc0akeITc1jsDLtGkcHkfs6HwA0bv82TkqDAYFYPvU6QOJBLK8MY7AcPSMHcyUJ+t1bmGe3i1NgZffqRNobIrMtrv5LHzTopRZDJmLSMoWDf6ZaKWd5qM1w//Lzupxv1omiu8SNFle3X9IcEUpMZd6CDm3Sp7H60KK4l82okbyAaedhFuLnOAzz3Vqn5Z1NamxoJifnaZNqnpZsLeG9Zm/mWzC/JIriLBwG0jKCIIdHprQ22LRMdbC+zH+JDiZZ+U4gDaKaT8WlDtJtmygQP9Uxuu9alxIE24JkOH13yTOXKagtRWYXX8qYOlCpVVp8BiA4rTiWWclkwO3OTBnEBQIDGVooc1yFhaoYxV6l9Z+QHaLSpkKrargnKFbrJ7YMB6qLHqrja80vJEOh9CehlvCEcGWHnhgNIcVsh/oFIhtPNQsUOizGeX79EQEAMMHsOeACge2u1yTroHNo0wj20oploKNa/UIEjaa0htwpLsZ7R7qEdTH9mnML2Mxjoa99AhW669DM="
+  - "node"
+  # Normally, travis runs your script in a docker container.
+  # I've had firefox crash in docker containers (firefox tries to use linux namespaces, just like docker)
+  # "sudo: required" causes travis to use a VM instead.
+sudo: required
+dist: trusty
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y xvfb openbox chromium-browser firefox
+install:
+  - npm install
+script:
+  - lsb_release -a
+  - firefox --version
+  - chromium-browser --version
+  - Xvfb :100 -ac -noreset -screen 0 1024x768x16 &
+  - export DISPLAY=:100.0
+  - export CHROME_BIN=/usr/bin/chromium-browser
+  # Firefox can crash if you do not have a window manager
+  # (for example when window.open() tries to maximize the new window)
+  - openbox &
+  - npm test
