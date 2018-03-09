@@ -23,7 +23,7 @@
     "browser"
   ],
   "author": "Jeff Carpenter <gcarpenterv@gmail.com>",
-  "license": "ISC",
+  "license": "https://github.com/w3c/web-platform-tests/blob/master/LICENSE.md",
   "bugs": {
     "url": "https://github.com/jsdom/abab/issues"
   },
