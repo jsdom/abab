@@ -10,6 +10,12 @@ const fixtures = require("./fixtures");
   const abFn = abab[abFnKey];
   const cases = fixtures.get(abFnKey);
 
+  it(`${abFnKey} rejects symbol input`, () => {
+    assert.throws(() => {
+      abFn(Symbol.iterator);
+    }, TypeError);
+  });
+
   cases.forEach(testCase => {
     it(`correctly converts ${testCase.inputDescriptor} into ${testCase.expectedDescriptor}`, () => {
       assert.strictEqual(abFn(testCase.input), testCase.expected);
