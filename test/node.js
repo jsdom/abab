@@ -1,17 +1,18 @@
-'use strict';
+/* eslint-env mocha */
 
-const assert = require('assert');
-const abab = require('..');
-const fixtures = require('./fixtures');
+"use strict";
 
-['atob', 'btoa'].forEach(abFnKey => {
-  let abFn = abab[abFnKey];
-  let cases = fixtures.get(abFnKey);
+const assert = require("assert");
+const abab = require("..");
+const fixtures = require("./fixtures");
+
+["atob", "btoa"].forEach(abFnKey => {
+  const abFn = abab[abFnKey];
+  const cases = fixtures.get(abFnKey);
 
   cases.forEach(testCase => {
     it(`correctly converts ${testCase.inputDescriptor} into ${testCase.expectedDescriptor}`, () => {
       assert.strictEqual(abFn(testCase.input), testCase.expected);
     });
-
   });
 });

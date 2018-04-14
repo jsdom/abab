@@ -15,14 +15,14 @@ npm install abab
 ### `btoa` (base64 encode)
 
 ```js
-const btoa = require('abab').btoa;
+const { btoa } = require('abab');
 btoa('Hello, world!'); // 'SGVsbG8sIHdvcmxkIQ=='
 ```
 
 ### `atob` (base64 decode)
 
 ```js 
-const atob = require('abab').atob;
+const { atob } = require('abab');
 atob('SGVsbG8sIHdvcmxkIQ=='); // 'Hello, world!'
 ```
 
@@ -35,8 +35,8 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // 'Hello, world!'
 If you want to include just one of the methods to save bytes in your client-side code, you can `require` the desired module directly.
 
 ```js
-var atob = require('abab/lib/atob');
-var btoa = require('abab/lib/btoa');
+const atob = require('abab/lib/atob');
+const btoa = require('abab/lib/btoa');
 ```
 
 -----
