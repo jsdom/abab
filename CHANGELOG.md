@@ -1,3 +1,12 @@
+## 2.0.0
+
+Modernization updates thanks to @TimothyGu:
+
+- Use jsdom's eslint config, remove jscs
+- Move syntax to ES6
+- Remove Babel
+- Via: https://github.com/jsdom/abab/pull/26
+
 ## 1.0.4
 
 - Added license file
