@@ -1,3 +1,5 @@
+Copyright © 2019 W3C and Jeff Carpenter \<jeffcarp@chromium.org\>
+
 Both the original source code and new contributions in this repository are released under the [W3C 3-clause BSD license](https://github.com/w3c/web-platform-tests/blob/master/LICENSE.md#w3c-3-clause-bsd-license).
 
 # W3C 3-clause BSD License
