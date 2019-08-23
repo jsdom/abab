@@ -4,6 +4,7 @@
   "description": "WHATWG spec-compliant implementations of window.atob and window.btoa.",
   "main": "index.js",
   "files": [
+    "index.d.ts",
     "index.js",
     "lib/"
   ],
