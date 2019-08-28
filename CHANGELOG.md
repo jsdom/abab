@@ -1,3 +1,7 @@
+## 2.0.1
+
+- Add TypeScript type definitions, thanks to @LinusU
+
 ## 2.0.0
 
 Modernization updates thanks to @TimothyGu:
