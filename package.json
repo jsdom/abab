@@ -24,7 +24,7 @@
     "browser"
   ],
   "author": "Jeff Carpenter <gcarpenterv@gmail.com>",
-  "license": "BSD New",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/jsdom/abab/issues"
   },
