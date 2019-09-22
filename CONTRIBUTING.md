@@ -11,7 +11,6 @@ If you have any questions or run into any trouble contributing to this repo, ple
 
 ## Deploy
 
-- Update `CHANGELOG.md` to reflect changes since last tag
 - `git checkout master`
 - `git pull`
 - `git status`
@@ -22,7 +21,8 @@ If you have any questions or run into any trouble contributing to this repo, ple
 - `npm test`
 - Verify Travis build is also passing https://travis-ci.org/jsdom/abab
 - Bump version in `package.json`
-- `git add package.json`
+- Update `CHANGELOG.md` to reflect changes since last tag
+- `git add package.json package-lock.json CHANGELOG.md`
 - `git commit -m "Version 0.0.0"`
 - `git tag -m "0.0.0" 0.0.0`
 - `git push`
