@@ -7,7 +7,7 @@ const abab = require("..");
 const fixtures = require("./fixtures");
 
 const keystr =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
 for (let i = 0; i < 256; i++) {
   const input = `\0\0${String.fromCharCode(i)}`;
