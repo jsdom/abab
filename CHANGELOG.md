@@ -1,3 +1,8 @@
+## 2.0.5
+
+-   Use a lookup string in atobLookup and btoaLookup (@GiovanniFrigo in #38)
+-   Dependency updates
+
 ## 2.0.4
 
 -   Dependency updates
