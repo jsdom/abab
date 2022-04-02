@@ -33,15 +33,24 @@ for (let i = 0; i < 64; i++) {
   const abFn = abab[abFnKey];
   const cases = fixtures.get(abFnKey);
 
-  it(`${abFnKey} rejects symbol input`, () => {
-    assert.throws(() => {
-      abFn(Symbol.iterator);
-    }, TypeError);
-  });
+  describe(abFnKey, () => {
+    it(`rejects symbol input`, () => {
+      assert.throws(() => {
+        abFn(Symbol.iterator);
+      }, TypeError);
+    });
 
-  cases.forEach(testCase => {
-    it(`correctly converts ${testCase.inputDescriptor} into ${testCase.expectedDescriptor}`, () => {
-      assert.strictEqual(abFn(testCase.input), testCase.expected);
+    it("throws TypeError when passed no inputs", () => {
+      assert.throws(() => {
+        abFn();
+      }, TypeError);
+    });
+
+    cases.forEach(testCase => {
+      it(`correctly converts ${testCase.inputDescriptor} into ${testCase.expectedDescriptor}`, () => {
+        assert.strictEqual(abFn(testCase.input), testCase.expected);
+      });
     });
   });
 });
+

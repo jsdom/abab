@@ -30,13 +30,15 @@ const browserAbab = {
   const browserFn = browserAbab[abFnKey];
   const cases = fixtures.get(abFnKey);
 
-  cases.forEach(testCase => {
-    if (navigator.userAgent.indexOf("Windows") >= 0 && ieExemptCases.indexOf(testCase.input) >= 0) {
-      return;
-    }
+  describe(abFnKey, () => {
+    cases.forEach(testCase => {
+      if (navigator.userAgent.indexOf("Windows") >= 0 && ieExemptCases.indexOf(testCase.input) >= 0) {
+        return;
+      }
 
-    it(`correctly converts ${testCase.inputDescriptor} into ${testCase.expectedDescriptor}`, () => {
-      assert.strictEqual(abFn(testCase.input), browserFn(testCase.input));
+      it(`correctly converts ${testCase.inputDescriptor} into ${testCase.expectedDescriptor}`, () => {
+        assert.strictEqual(abFn(testCase.input), browserFn(testCase.input));
+      });
     });
   });
 });
