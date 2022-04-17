@@ -1,3 +1,9 @@
+## 2.0.6
+
+-   Throw TypeError when passed zero arguments (#73), thanks to @DerekNonGeneric (19c5abd)
+-   Use Yarn for development (87c89c6)
+-   Dependency updates
+
 ## 2.0.5
 
 -   Use a lookup string in atobLookup and btoaLookup (@GiovanniFrigo in #38)
