@@ -1,4 +1,7 @@
-# abab [![npm version](https://badge.fury.io/js/abab.svg)](https://www.npmjs.com/package/abab) [![Build Status](https://travis-ci.org/jsdom/abab.svg?branch=master)](https://travis-ci.org/jsdom/abab)
+# abab
+
+[![npm version](https://badge.fury.io/js/abab.svg)](https://www.npmjs.com/package/abab)
+[![CI](https://github.com/jsdom/abab/actions/workflows/ci.yml/badge.svg)](https://github.com/jsdom/abab/actions/workflows/ci.yml)
 
 A JavaScript module that implements `window.atob` and `window.btoa` according the forgiving-base64 algorithm in the [Infra Standard](https://infra.spec.whatwg.org/#forgiving-base64). The original code was forked from [w3c/web-platform-tests](https://github.com/web-platform-tests/wpt/blob/master/html/webappapis/atob/base64.any.js).
 
