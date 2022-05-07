@@ -13,7 +13,7 @@ module.exports = function (config) {
       mode: "development"
     },
 
-    frameworks: ["mocha"],
+    frameworks: ["mocha", "webpack"],
 
     reporters: ["dots"],
 
