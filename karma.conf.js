@@ -1,5 +1,7 @@
 "use strict";
 
+const webpack = require("webpack");
+
 module.exports = function (config) {
   config.set({
     basePath: "",
@@ -10,7 +12,12 @@ module.exports = function (config) {
     },
 
     webpack: {
-      mode: "development"
+      mode: "development",
+      plugins: [
+        new webpack.ProvidePlugin({
+          process: "process"
+        })
+      ]
     },
 
     frameworks: ["mocha", "webpack"],
